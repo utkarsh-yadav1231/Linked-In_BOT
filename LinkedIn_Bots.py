@@ -98,7 +98,7 @@ def bot1():
         search_mail = browser.find_elements_by_class_name('IsZvec') # will look for emails in the page description card. 
         google_page = browser.page_source
         source_page = BeautifulSoup(google_page,'lxml') #Selenium hands the google page source to Beautiful Soup for parsing
-        google_links = source_page.find_all('div',{'class':'yuRUbf'}) #Finds all the 10 Blue Lines of unvisited links available on the cureent search page results.
+        google_links = source_page.find_all('div',{'class':'yuRUbf'}) #Finds all the 10 Blue Lines of unvisited links available on the current search page results.
         
         #Below loop iterates all the blue links to search for xpaths to append in list_xp( x paths list) later. 
         for links_to_iterate in google_links:
